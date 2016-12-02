@@ -1,0 +1,57 @@
+Filter by type:
+<input type="text" ng-model="filter_query">
+<button ng-disabled="!filter_query" btn btn-default
+	ng-click=getComponents()>Search</button>
+<button btn btn-defaul ng-click="filter_query=null;getComponents()">Reset</button>
+
+<table ng-init="init();getComponents()" class="table table-bordered">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Type</th>
+			<th>Item #</th>
+			<th>Item Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Action</th>
+
+		</tr>
+	</thead>
+	<tbody class="table">
+		<tr ng-repeat="component in components">
+			<td>{{ component.id }}</td>
+			<td>{{ component.type }}</td>
+			<td>{{ component.itemCode }}</td>
+			<td>{{ component.name }}</td>
+			<td>{{ component.price }}</td>
+			<td>{{ component.quantity }}</td>
+
+			<td>
+				<button ng-model="button"
+					ng-click="hideAlerts();deleteComponent(component.id)"
+					class="btn btn-xs btn-danger">Delete</button> <a
+				href="#/component/edit/{{ component.id }}"
+				class="btn btn-xs btn-default">Edit</a>
+			</td>
+		</tr>
+
+	</tbody>
+</table>
+<div id="visinaTabele">
+<div class="text-center">
+<ul uib-pagination total-items="totalItems" ng-model="currentPage"
+	ng-change="pageChanged();setPageNumber(pageNumber);getComponents()"></ul>
+</div>
+</div>
+<div ng-show="blueAlert" class="alert alert-info">
+	<strong>Info!</strong> Uspesno ste izbrisali proizvod {{deleted.name}}
+	sa sifrom {{deleted.itemCode}} sa lagera.
+</div>
+<div ng-show="redAlert" class="alert alert-danger">
+	<strong>Paznja!</strong> Proizvodi koji su na lageru se ne mogu
+	brisati.
+</div>
+<a href="#/AddEditComponent" class="btn btn-default">Add new
+	Component</a>
+
+

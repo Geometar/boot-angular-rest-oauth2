@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="Primer.xsd">
+    <ComponentType>
+        <Name>Processor</Name>
+        <Type>REQUIRED_SINGLE</Type>
+    </ComponentType>
+
+    <ComponentType>
+        <Name>Motherboard</Name>
+        <Type>REQUIRED_SINGLE</Type>
+    </ComponentType>
+
+    <ComponentType>
+        <Name>Hard Disk</Name>
+        <Type>REQUIRED_MULTIPLE</Type>
+    </ComponentType>
+
+    <ComponentType>
+        <Name>Graphic Card</Name>
+        <Type>OPTIONAL_MULTIPLE</Type>
+    </ComponentType>
+
+    <ComponentType>
+        <Name>Printer</Name>
+        <Type>OPTIONAL_SINGLE</Type>
+    </ComponentType>
+
+    <ComponentType>
+        <Name>Sound Card</Name>
+        <Type>OPTIONAL_SINGLE</Type>
+    </ComponentType>
+
+    <ComponentType>
+        <Name>Case</Name>
+        <Type>REQUIRED_SINGLE</Type>
+    </ComponentType>
+</ComponentTypes>

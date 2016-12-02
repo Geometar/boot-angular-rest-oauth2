@@ -1,0 +1,38 @@
+
+<div class="container col-md-12">
+	<table class="table table-bordered col-md-12"
+		ng-init="init();getComponents()">
+		<tr>
+			<th class="col-md-1">Vrsta proizvoda</th>
+			<th class="col-md-1">Naziv proizvoda</th>
+			<th class="col-md-1">Kolicina</th>
+			<th class="col-md-1">Cena</th>
+		</tr>
+		<tr ng-repeat="component in components">
+			<td ng-model="components.component.type">{{ component.type }}</td>
+			<td ng-model="components.component.name">{{ component.name }}</td>
+			<td ng-model="components.component.quantity"><input ng-model="component.quantity"
+				type="text" /></td>
+			<td ng-model="components.component.ammount">{{ component.price * component.quantity
+				}}</td>
+			<td class="col-md-1"
+				ng-show="(component.quantity!=1 && component.value=='REQUIRED_ONE')">Required one and only one</td>
+			<td class="col-md-1"
+				ng-show="((component.quantity==1 || component.quantity==0) && component.value=='OPTIONAL_ONE')">Must
+				take one or zero</td>
+			<td class="col-md-1"
+				ng-show="(component.quantity<1 && component.value=='REQUIRED_N')">Required
+				at least one</td>
+			<td class="col-md-1" ng-show="(component.quantity>component.quantity)">Not
+				enough on stock</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<button ng-click="saveConfiguration(quantity)"
+					class="btn btn-default btn-small">Make configuration</button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+

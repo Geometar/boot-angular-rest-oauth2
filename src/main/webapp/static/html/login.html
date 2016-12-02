@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html ng-app="configApp">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Computer Configuration</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<link href="/static/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/css/main.css" rel="stylesheet">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/static/js/assets/jquery-2.1.1.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/static/js/assets/bootstrap.js"></script>
+
+<script src="static/js/assets/angular.js"></script>
+<script src="static/js/assets/angular-route.js"></script>
+<script src="static/js/assets/ui-bootstrap-tpls-2.3.0.js"></script>
+
+<script src="static/js/app.js"></script>
+<script src="static/js/app.controllers.js"></script>
+<script src="static/js/app.directives.js"></script>
+<script src="static/js/app.services.js"></script>
+<script src="static/js/app.routes.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header"></div>
+		</div>
+	</div>
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>HCA</h1>
+			<p>Hardware Configuration Application</p>
+
+		</div>
+	</div>
+
+	<!-- content here -->
+	<div class="container">
+		<div class="col-md-4 col-md-offset-4">
+			<form action="/login" method="post">
+				<div class="form-group">
+					<label for="exampleInputEmail1">Email</label> <input type="email"
+						name="email" class="form-control" id="exampleInputEmail1"
+						placeholder="name">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label> <input
+						type="password" name="password" class="form-control"
+						id="exampleInputPassword1" placeholder="Password">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="page-footer">Copyright Levi9©</div>
+</body>
+</html>
