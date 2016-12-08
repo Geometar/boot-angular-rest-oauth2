@@ -43,6 +43,7 @@ public class User {
 	@OneToMany(mappedBy="user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<ComponentsComments> componentsComments;
 	
+	// molim?
 
 	public List<Order> getOrders() {
 		return orders;
