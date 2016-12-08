@@ -1,0 +1,24 @@
+# ECLIPSE CONFIG
+.classpath
+.project
+.settings
+*/target/
+/bin
+
+# IDEA CONFIG
+.idea
+**/*.iml
+**/build
+.gradle
+gradle/
+gradlew
+gradlew.bat
+
+# STS CONFIG
+.springBeans
+
+
+/log
+/build/
+/target/
+/praktikanti2/hardwareConfigurator/target/

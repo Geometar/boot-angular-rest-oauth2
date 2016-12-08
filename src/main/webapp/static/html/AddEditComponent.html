@@ -1,0 +1,57 @@
+<form class="form-horizontal" ng-init="initComponent()" required>
+
+	<div class="form-group">
+		<label class="col-sm-2">Item Name</label>
+		<div class="col-sm-6">
+			<input ng-disabled="component.id" ng-model="component.name"
+				class="form-control" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2">Item #</label>
+		<div class="col-sm-6">
+			<input ng-disabled="component.id" ng-model="component.itemCode"
+				class="form-control" />
+
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2">Type</label>
+		<div class="col-sm-6">
+			<select class="form-control" ng-model="component.type">
+				<option value="OPTIONAL_ONE">Optional one</option>
+				<option value="REQUIRED_ONE">Required one</option>
+				<option value="OPTIONAL_N">Optional n</option>
+				<option value="REQUIRED_N">Required n</option>
+			</select>
+
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2">Price</label>
+		<div class="col-sm-6">
+			<input ng-model="component.price" class="form-control" />
+
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2">Quantity</label>
+		<div class="col-sm-6">
+			<input ng-model="component.quantity" class="form-control" />
+
+		</div>
+	</div>
+
+
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button
+				ng-disabled="!component.quantity||!component.type || !component.price||!component.itemCode ||!component.name"
+				ng-click="saveComponent()" type="submit" class="btn btn-default">Save</button>
+		</div>
+	</div>
+</form>

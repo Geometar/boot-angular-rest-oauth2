@@ -1,0 +1,75 @@
+<div class="container col-md-12">
+	<form class="form-horizontal text-center" ng-init="init()" required>
+
+		<div class="form-group">
+			<label class="col-sm-3">Firstname</label>
+			<div class="col-sm-6">
+				<input ng-disabled="component.id" ng-model="user.firstname"
+					class="form-control" />
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<label class="col-sm-3">Lastname</label>
+			<div class="col-sm-6">
+				<input ng-disabled="component.id" ng-model="user.lastname"
+					class="form-control" />
+
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-sm-3">Number</label>
+			<div class="col-sm-6">
+				<input ng-model="user.number" class="form-control" />
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-sm-3">Email</label>
+			<div class="col-sm-6">
+				<input ng-model="user.email" class="form-control" />
+
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-sm-3">Placanje</label>
+			<div class="col-sm-6">
+				<select ng-model="user.paymentType" class="form-control">
+					<option value="POUZECEM">Pouzecem</option>
+					<option value="UPLATANARACUN">Uplata na Racun</option>
+					<option value="KREDITNA_KARTICA">Kreditna Kartica</option>
+				</select>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3">Grad</label>
+			<div class="col-sm-6">
+				<input ng-model="user.grad" class="form-control" />
+
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3">Adresa</label>
+			<div class="col-sm-6">
+				<input ng-model="user.address" class="form-control" />
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button ng-click="saveChanges()">Save</button>
+			</div>
+		</div>
+
+
+	</form>
+	<div class=" col-md-offset-1 text-left">
+		<a href="#/profile/{{user.id}}/configuration" class="btn btn-info">Configuration
+			history</a>
+	</div>
+</div>

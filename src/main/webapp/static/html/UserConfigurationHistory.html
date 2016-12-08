@@ -1,0 +1,21 @@
+<div class="container col-md-12" ng-init="configurationHistory($routeParams.id)">
+
+	<table class="table table-striped">
+	<tr>
+		<th>
+		Order number
+		</th>
+		<th>
+		Purchase date
+		</th>
+		<th>
+		Total ammount
+		</th>
+	</tr>
+	<tr ng-repeat="configuraion in configurations">
+	<td>{{configuraion.orderId}}</td>
+	<td>{{configuraion.date | date : 'dd-MMMM-yyyy'}}</td>
+	<td>{{(configuraion.totalAmmount | number:2) + " din"}}</td>
+	</tr>
+	</table>
+</div>

@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Nemam Pojma",
+  "main": "test",
+  "scripts": {
+    "test": "a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "s"
+  },
+  "keywords": [
+    "s"
+  ],
+  "author": "a",
+  "license": "UNLICENSED"
+}
